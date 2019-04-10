@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Synergy of Diaspora">
+
+		<link rel="stylesheet" href="{% static 'synerd/styles/demo.css' %}">
+		<script src="{% static 'synerd/scripts/demojs.js' %}"></script>
+		<title>synerD Registration</title>
+		<script type="text/javascript">
+			function validateForm() {
+				var x = document.forms["myForm"]["username"].value;
+				if (x == "") {
+					alert("username must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["password"].value;
+				if (x == "") {
+					alert("password must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["fname"].value;
+				if (x == "") {
+					alert("First name must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["mname"].value;
+				if (x == "") {
+					alert("Middle Name must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["lname"].value;
+				if (x == "") {
+					alert("Last Name must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["address"].value;
+				if (x == "") {
+					alert("Street Address must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["city"].value;
+				if (x == "") {
+					alert("City must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["zip"].value;
+				if (x == "") {
+					alert("Zip Code must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["email"].value;
+				if (x == "") {
+					alert("Email must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["cell"].value;
+				if (x == "") {
+					alert("Cell Phone Number must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["country"].value;
+				if (x == "") {
+					alert("Country of Origin must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["dob"].value;
+				if (x == "") {
+					alert("Date of Birth must be filled out");
+					return false;
+				}
+				var x = document.forms["myForm"]["organization"].value;
+				if (x == "") {
+					alert("Member Organization must be filled out");
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+
+		<div class="header">
+		  <h1><img src="{% static 'synerd/images/logo_synerD.png' %}" style="width:20%">Synergy of Diaspora</h1>
+		</div>
+
+<!-- Broad and Shallow navigation bar -->
+		<div class="topnav">
+			<a href="{% url 'index' %}">Home</a>
+		  <a href="#">Our Work</a>
+		  <a href="#">Members</a>
+		  <a href="#">Resources</a>
+			<input type="text1" placeholder="Search..">
+		  <a href="#" style="float:right">Donate</a>
+			<a href="{% url 'registration' %}" style="float:right">Join Us</a>
+			<a href="{% url 'registration' %}" style="float:right">Sign-in</a>
+		</div>
+
+		<div class="row">
+		  <div class="leftcolumn">
+				<div class="card">
+					<form name="myForm" method=POST onload="states()" onsubmit="return validateForm()">
+						<legend><h2 align="center">Registration </h2></legend>
+						username: <input type="text" name="username" placeholder="username"><br>
+						password: <input type="password" name="password" placeholder="password"><br>
+						First Name: <input type="text" name="fname" placeholder="First Name"><br>
+						Middle Name: <input type="text" name="mname" placeholder="Middle Name"><br>
+						Last Name: <input type="text" name="lname" placeholder="Last Name"><br>
+						Gender: <select name="gender">
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+								</select><br>
+						Street Address: <input type="text" name="address"><br>
+						City: <input type="text" name="city"><br>
+						State: 	<select name="state" id="state">
+									<option value="AL">AL</option>
+									<option value="AK">AK</option>
+									<option value="AR">AR</option>
+									<option value="AZ">AZ</option>
+									<option value="CA">CA</option>
+									<option value="CO">CO</option>
+									<option value="CT">CT</option>
+									<option value="DC">DC</option>
+									<option value="DE">DE</option>
+									<option value="FL">FL</option>
+									<option value="GA">GA</option>
+									<option value="HI">HI</option>
+									<option value="IA">IA</option>
+									<option value="ID">ID</option>
+									<option value="IL">IL</option>
+									<option value="IN">IN</option>
+									<option value="KS">KS</option>
+									<option value="KY">KY</option>
+									<option value="LA">LA</option>
+									<option value="MA">MA</option>
+									<option value="MD">MD</option>
+									<option value="ME">ME</option>
+									<option value="MI">MI</option>
+									<option value="MN">MN</option>
+									<option value="MO">MO</option>
+									<option value="MS">MS</option>
+									<option value="MT">MT</option>
+									<option value="NC">NC</option>
+									<option value="NE">NE</option>
+									<option value="NH">NH</option>
+									<option value="NJ">NJ</option>
+									<option value="NM">NM</option>
+									<option value="NV">NV</option>
+									<option value="NY">NY</option>
+									<option value="ND">ND</option>
+									<option value="OH">OH</option>
+									<option value="OK">OK</option>
+									<option value="OR">OR</option>
+									<option value="PA">PA</option>
+									<option value="RI">RI</option>
+									<option value="SC">SC</option>
+									<option value="SD">SD</option>
+									<option value="TN">TN</option>
+									<option value="TX">TX</option>
+									<option value="UT">UT</option>
+									<option value="VT">VT</option>
+									<option value="VA">VA</option>
+									<option value="WA">WA</option>
+									<option value="WI">WI</option>
+									<option value="WV">WV</option>
+									<option value="WY">WY</option>
+								</select><br>
+						Zip Code: <input type="text" name="zip"><br>
+						Email: <input type="email" name="email"><br>
+						Cell Phone Number: <input type="text" name="cell"><br>
+						Country of Origin: <input type="text" name="country"><br>
+						Date of Birth: <input type="date" name="dob"><br>
+						Member Organization: <input type="text" name="organization"><br>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
